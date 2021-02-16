@@ -9,28 +9,91 @@
     <meta charset="utf-8">
     <title>Welcome</title>
   </head>
-  <body >
+  <body onload="initClock()">
 
-    <div cl="Datetime">
+    <div class="Datetime">
       <div class="time">
-        <span class="hours">13</span>:
-        <span class="mins">00</span>:
-        <span class="secs">00</span>
+        <span id="hours"></span>:
+        <span id="mins"></span>:
+        <span id="secs"></span>
       </div>
       <div class="date">
 
-          <span class="date">21st</span>,
-          <span class="month">November</span>,
-          <span class="year">2021</span>
+          <span id="date">21st</span>,
+          <span id="month">November</span>,
+          <span id="year">2020</span>
 
       </div>
 
     </div>
+    <script>
+    function updateClock()
+    {
+      var now= new Date();
+      var
+          mo=now.getMonth(),
+          dnum=now.getDate(),
+          yr=now.getFullYear(),
+          h=now.getHours(),
+          min=now.getMinutes(),
+          sec=now.getSeconds();
+    var ids=["month","date","year","hours","mins","secs"] ;
+     var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+        if(sec<10)
+        {
+          sec="0"+sec;
+        }
+      if(dnum>=11&&dnum<=20)
+      {
+        dnum=dnum+"th"
+      }
+      else
+      if(dnum%10==1){
+        dnum=dnum+"st";
 
+      }
+      else
+      if(dnum%10==2){
+        dnum=dnum+"nd";
+
+      }
+      else
+      if(dnum%10==3){
+        dnum=dnum+"rd";
+
+      }
+      else {
+        dnum=dnum+"th"
+      }
+      var   values=[months[mo] ,dnum,yr,h,min,sec];
+    for(var i =0;i<6;i++)
+    {
+      document.getElementById(ids[i]).innerHTML=values[i];
+    }
+
+    }
+    function initClock()
+    {
+      updateClock();
+      window.setInterval("updateClock()",1);
+    }
+    </script>
+<div class="container">
+
+    <div id="compliment">...</div>
     <div class="message">
-      <div id="compliment">...</div>
+
+      may I do a google search for you?
     </div>
-      <p class="request">May I do a google search for you?</p>
+
+</div>
+<div class="message2">
+    <form  action="http://www.google.com/search" method="get">
+      <input id="search" type="text" name="q" autofocus="autofocus" placeholder="Search..."/>
+
+    </form>
+</div>
+
 <script src="scripts.js"></script>
   </body>
 </html>

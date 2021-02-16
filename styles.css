@@ -1,34 +1,39 @@
+body{
 
-body
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+background: #1A1A2E;
+margin-top:120px;
+
+}
+
+#compliment
 {
-  background-color:  #1A1A2E;
-  padding-left:50px;
-  padding-top: 50px;
+  font-family: IBM Plex Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+
+  color: #E7E7E7;
+  padding:5px;
+  color:white;
+  background-color: #0f3460;
+  border-radius: 24px;
+
+
 
 }
 .Datetime
 {
-  display:flex;
-  flex-direction: column;
+  margin-left: 25%;
 }
 
-.time{
-
-padding:0;
-font-family: Bungee Hairline;
-font-style: normal;
-font-weight: normal;
-font-size: 144px;
-line-height: 100px;
-
-color: #FFFFFF;
-
-mix-blend-mode: normal;
-}
-
-.date{
-padding-left: 10px;
-font-family: Bungee Inline;
+.date
+{
+  font-family: Bungee Inline;
 font-style: normal;
 font-weight: normal;
 font-size: 36px;
@@ -38,38 +43,74 @@ color: #E94560;
 
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.time
+{
+  font-family: Bungee Hairline;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 144px;
+  line-height: 100px;
+
+  color: #FFFFFF;
+
+  mix-blend-mode: normal;
+}
 .message
 {
-display:inline-block;
-  margin:15px;
-color: #FFFFFF;
-}
-#compliment
-{
-  margin:15px;
-background: #0F3460;
-border-radius: 25px;
-
-padding:5px;
-font-family: IBM Plex Mono;
+  margin-top:20px;
+  font-family: IBM Plex Mono;
 font-style: normal;
 font-weight: normal;
-font-size: 36px;
-line-height: 47px;
-}
-.request
-{
-margin:15px;
-margin-left: 23px;
-padding:5px;
-display: table;
-background: #0F3460;
-border-radius: 25px;
-font-family: IBM Plex Mono;
-font-style: normal;
-font-weight: normal;
-font-size: 36px;
-line-height: 47px;
-color: #FFFFFF;
+font-size: 15px;
+line-height: 15px;
 
+color: #E7E7E7;
+padding:5px;
+color:white;
+background-color: #0f3460;
+border-radius: 24px;
+width:300px;
+
+}
+.message2
+{
+  margin-left: 55%;
+}
+#search
+{
+
+
+  margin-top:20px;
+  font-family: IBM Plex Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  outline: none;
+  padding:5px;
+  color:white;
+  background-color: #e94560;
+  border:none;
+  border-radius: 24px;
+  width:300px;
+
+
+
+}
+.container
+{ margin-top: 50px;
+  display:flex;
+  flex-direction: column;
+  margin-left:25%;
+
+}
+.searchbar
+{
+  border: 5px solid green;
+  width:300px;
+}
+::placeholder
+{
+  color:white;
+  opacity: 0.4;
 }
